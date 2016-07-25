@@ -1,19 +1,37 @@
+$carousel-background: lighten($developer-blue, 40%);
+
 .mui-hero-carousel {
-  background: lighten($developer-blue, 40%);
+  background: $carousel-background;
 
   .heroes {
     display: flex;
 
     .hero {
       background: none;
-      border: none;
+      border: 0;
       margin: 0;
       padding: 0;
       outline: 0;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
 
       .photo {
         max-width: 100%;
         opacity: 0.5;
+        transition: opacity 250ms ease-in-out;
+
+      }
+
+      &.active::after {
+        content: " ";
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        bottom: -5%;
+        left: 47.5%;
+        background: $carousel-background;
+        transform: rotate(45deg);
       }
 
       &.active .photo {
@@ -25,7 +43,22 @@
 
   .quotes {
     > * {
+      display: none;
+      color: darken($developer-blue, 20%);
+      font-style: italic;
       padding: 1rem;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .caption {
+      text-align: center;
+    }
+
+    .attribution {
+      text-align: center;
     }
   }
 }
