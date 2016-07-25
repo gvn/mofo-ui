@@ -1,0 +1,31 @@
+.mui-hero-carousel {
+  background: lighten($developer-blue, 40%);
+
+  .heroes {
+    display: flex;
+
+    .hero {
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      outline: 0;
+
+      .photo {
+        max-width: 100%;
+        opacity: 0.5;
+      }
+
+      &.active .photo {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  .quotes {
+    > * {
+      padding: 1rem;
+    }
+  }
+}
