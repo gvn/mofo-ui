@@ -13,7 +13,13 @@ export default React.createClass({
       activeTrigger: 0
     };
   },
-  onTriggerClick: function (index) {
+  onTriggerClick: function (event) {
+    let elTrigger = event.currentTarget,
+        elSiblings = elTrigger.parentElement.children;
+
+    // Infer active trigger index from the index of the clicked item
+    let index = Array.prototype.indexOf.call(elSiblings, elTrigger);
+
     this.setState({
       activeTrigger: index
     });
@@ -23,7 +29,7 @@ export default React.createClass({
       let classNames = `hero${this.state.activeTrigger === index ? ` active` : ``}`;
 
       return (
-        <button key={index} className={classNames} onClick={this.onTriggerClick.bind(null, index)}>
+        <button key={index} className={classNames} onClick={this.onTriggerClick}>
           <img className="photo" src={item.image}></img>
         </button>
       );
