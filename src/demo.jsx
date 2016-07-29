@@ -3,7 +3,7 @@ import { render } from "react-dom";
 
 // Components
 
-import { HeroCarousel, TabSwitcher, Tab, RadioFilter, Collapse, Panel } from "./exports.js";
+import { ThumbCarousel, TabSwitcher, Tab, RadioFilter, Collapse, Panel } from "./exports.js";
 
 const App = React.createClass({
   render() {
@@ -100,9 +100,9 @@ render((
       <Tab slug="four" name="Four" iconDefault="/img/icon-tab-schedule-blue.svg">Four content.</Tab>
     </TabSwitcher>
 
-    <h3>HeroCarousel</h3>
+    <h3>ThumbCarousel</h3>
 
-    <HeroCarousel contents={carouselData}></HeroCarousel>
+    <ThumbCarousel contents={carouselData}></ThumbCarousel>
 
   </App>
 ), document.querySelector(`#app`));

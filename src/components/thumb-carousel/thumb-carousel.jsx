@@ -39,7 +39,7 @@ export default React.createClass({
     });
 
     return (
-      <div className="mui-hero-carousel">
+      <div className="mui-thumb-carousel">
         <div className="heroes">
           {triggers}
         </div>
