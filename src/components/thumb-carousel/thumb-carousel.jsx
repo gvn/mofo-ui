@@ -1,4 +1,5 @@
 import React from "react";
+import DOMPurify from "dompurify";
 
 export default React.createClass({
   propTypes: {
@@ -38,7 +39,7 @@ export default React.createClass({
     let quotes = this.props.contents.map((item, index) => {
       return (
         <div key={index} className={this.state.activeTrigger === index ? `active` : ``}>
-          <p className="caption">"{item.caption}"</p>
+          <p className="caption" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(item.caption)}}></p>
           <p className="attribution">– {item.attribution}</p>
         </div>
       );
