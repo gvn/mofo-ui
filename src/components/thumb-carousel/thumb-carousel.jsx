@@ -29,10 +29,11 @@ export default React.createClass({
     let triggers = this.props.contents.map((item, index) => {
       let classNames = `hero${this.state.activeTrigger === index ? ` active` : ``}`;
 
+      // Using anchors instead of buttons because Firefox adds "padding" to button elements even with padding:0
       return (
-        <button key={index} className={classNames} onClick={this.onTriggerClick}>
+        <a key={index} className={classNames} onClick={this.onTriggerClick}>
           <img className="photo" src={item.image}></img>
-        </button>
+        </a>
       );
     });
 
