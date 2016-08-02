@@ -39,7 +39,12 @@ export default React.createClass({
     let quotes = this.props.contents.map((item, index) => {
       return (
         <div key={index} className={this.state.activeTrigger === index ? `active` : ``}>
-          <p className="caption" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(item.caption)}}></p>
+          <div className="wrapper">
+            <div className="quote quote-left"></div>
+            <p className="caption" dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(item.caption)}}></p>
+            <div className="quote quote-right"></div>
+          </div>
+
           <p className="attribution">– {item.attribution}</p>
         </div>
       );

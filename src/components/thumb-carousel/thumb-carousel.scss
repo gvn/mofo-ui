@@ -52,13 +52,39 @@ $carousel-background: lighten($developer-blue, 40%);
       }
     }
 
+    .wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
     .caption {
       font-weight: 300;
+      margin: 0;
+      padding: 0 10px;
       text-align: center;
+    }
+
+    .quote {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      // Base 64 encoded quote glyph
+      background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAxMDAgMjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEwMCAyNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzQyN0VBODt9DQoJLnN0MXtmaWxsOm5vbmU7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0wLDE0LjRjMC0xLjIsMC4zLTIuMiwxLjItNC4yTDYsMGg0LjNMNy41LDEwLjhjMS4yLDAuOSwxLjksMi4yLDEuOSwzLjZjMCwyLjUtMi4yLDQuNS00LjcsNC41DQoJCUMyLjEsMTguOSwwLDE2LjksMCwxNC40eiBNMTIuOCwxNC40YzAtMS4yLDAuMy0yLjIsMS4yLTQuMkwxOC45LDBoNC4zbC0yLjksMTAuOGMxLjIsMC45LDEuOSwyLjIsMS45LDMuNmMwLDIuNS0yLjIsNC41LTQuNyw0LjUNCgkJQzE0LjksMTguOSwxMi44LDE2LjksMTIuOCwxNC40eiIvPg0KPC9nPg0KPHJlY3QgaWQ9Il94M0NfU2xpY2VfeDNFXyIgY2xhc3M9InN0MSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjE5Ii8+DQo8L3N2Zz4NCg==);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .quote-right {
+      align-self: flex-end;
+      transform: scaleX(-1) scaleY(-1);
+      position: relative;
+      bottom: 8px;
     }
 
     .attribution {
       text-align: center;
+      padding: 0 30px;
+      margin-bottom: 0;
     }
   }
 }

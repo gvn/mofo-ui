@@ -44,7 +44,7 @@ let carouselData = [{
   attribution: `Cindy Sherman, Switzerland`
 }, {
   image: `./img/headshot-2.jpg`,
-  caption: `Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+  caption: `Very short quote.`,
   attribution: `Bob Loblaw, Kazakhstan`
 }, {
   image: `./img/headshot-3.jpg`,
